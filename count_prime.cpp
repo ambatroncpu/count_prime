@@ -13,21 +13,19 @@ int main() {
   }else{
     count = 1;
   }
-  while(num_track>end) {
+  while(num_track<=end) {
     int determine=0;
     for(int i=0;i<count;i++) {
-      if(num_track%sstore_prime[i]==0) {
-        determine = num_track;
+      if(num_track%store_prime[i]==0) {
+        determine = 1;
         break;
       }
-      num_track++;
-      if(determine!=0) {
-        determine = 0;
-        continue;
-      }
-      count++;
-      store_prime.push_back(determine);
     }
+      if(determine==0) {
+        count++;
+        store_prime.push_back(num_track);
+      }
+      num_track++;
   }
   cout<<count;
   return 0;
