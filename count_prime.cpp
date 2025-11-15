@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+  cin.tie(nullptr)->sync_with_stdio(false);
   int end,count=0,pos=1;
   vector<int> store;
   store.push_back(2);
