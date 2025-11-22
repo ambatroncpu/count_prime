@@ -5,11 +5,15 @@ using namespace std;
 
 int main() {
   cin.tie(nullptr)->sync_with_stdio(false);
+  
+  // input , variable
   int end,count=0,pos=1;
   vector<int> store;
   store.push_back(2);
   store.push_back(3);
   cin>>end;
+
+  // calculate
   if(end>=3){
     count = 2;
   }else if(end==2) {
@@ -45,6 +49,16 @@ int main() {
     }
     pos++;
   }
-  cout<<count;
+
+  // output
+  if (store[count-1]==end) {
+    cout<<end<<" is a prime\n";
+  }
+  cout<<"there are "<<count<<" prime in range\n";
+  cout<<"all prime in range : ";
+  for (int i=0;i<count;i++) {
+    cout<<store[i]<<" ";
+  }
+  
   return 0;
 }
